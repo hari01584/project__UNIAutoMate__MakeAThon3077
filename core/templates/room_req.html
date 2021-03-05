@@ -99,69 +99,33 @@
                 <div class="row">
                   <div class="col-md-5 pr-md-1">
                     <div class="form-group">
-                      <label>UserID (disabled)</label>
-                      <input type="text" class="form-control" disabled="" value="{{ request.user.id }}">
+                      <label>Name</label>
+                      <input type="text" class="form-control" value="{{ request.user.username }}">
                     </div>
                   </div>
                   <div class="col-md-3 px-md-1">
                     <div class="form-group">
-                      <label>Username</label>
-                      <input type="text" class="form-control" value="{{ request.user.username }}">
+                      <label>Room Number</label>
+                      <input type="text" class="form-control" >
                     </div>
                   </div>
                   <div class="col-md-4 pl-md-1">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" value="{{ request.user.email }}">
+                      <label for="exampleInputEmail1">Phone Number</label>
+                      <input type="email" class="form-control" >
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6 pr-md-1">
                     <div class="form-group">
-                      <label>First Name</label>
+                      <label>Time at which you want cleaning</label>
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  <div class="col-md-6 pl-md-1">
-                    <div class="form-group">
-                      <label>Last Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
+                  
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Address</label>
-                      <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4 pr-md-1">
-                    <div class="form-group">
-                      <label>City</label>
-                      <input type="text" class="form-control" placeholder="City" value="Mike">
-                    </div>
-                  </div>
-                  <div class="col-md-4 px-md-1">
-                    <div class="form-group">
-                      <label>Country</label>
-                      <input type="text" class="form-control" placeholder="Country" value="Andrew">
-                    </div>
-                  </div>
-                  <div class="col-md-4 pl-md-1">
-                    <div class="form-group">
-                      <label>Postal Code</label>
-                      <input type="number" class="form-control" placeholder="ZIP Code">
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-fill btn-primary">Save</button>
-                  </div>
-                </div>
+                
               </form>
             </div>
           </div>
