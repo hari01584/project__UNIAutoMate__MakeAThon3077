@@ -21,9 +21,11 @@ def login_view(request):
     if request.method == "POST":
 
         if form.is_valid():
-            username = form.cleaned_data.get("username")
+            email = form.cleaned_data.get("email")
             password = form.cleaned_data.get("password")
+            username = User.objects.get(email=email.lower()).username
             user = authenticate(username=username, password=password)
+            print("USN:",username)
             if user is not None:
                 login(request, user)
                 return redirect("/")
