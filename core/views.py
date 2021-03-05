@@ -15,11 +15,6 @@ from core.models import complains
 
 
 def complain_panel(request):
-    cmps = complains(
-      name = "HSSKSK", hostel = "Hostel M",
-      time = "7:15 AM",
-   )
 
-    cmps.save()
-
-    return render(request, "complain_panel.html")
+    comps_hist = complains.objects.all()
+    return render(request, "complain_panel.html",{'complains': comps_hist})
