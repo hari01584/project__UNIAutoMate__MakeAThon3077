@@ -25,14 +25,13 @@ def login_view(request):
             password = form.cleaned_data.get("password")
             username = User.objects.get(email=email.lower()).username
             user = authenticate(username=username, password=password)
-            print("USN:",username)
             if user is not None:
                 login(request, user)
                 return redirect("/")
-            else:    
-                msg = 'Invalid credentials'    
+            else:
+                msg = 'Invalid credentials'
         else:
-            msg = 'Error validating the form'    
+            msg = 'Error validating the form'
 
     return render(request, "accounts/login.html", {"form": form, "msg" : msg})
 
@@ -51,11 +50,11 @@ def register_user(request):
 
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
-            
+
             #return redirect("/login/")
 
         else:
-            msg = 'Form is not valid'    
+            msg = 'Form is not valid'
     else:
         form = SignUpForm()
 
