@@ -44,46 +44,30 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {% for i in medical %}
                   <tr>
                     <td>
-                      Kamalpreet Singh
+                      {{ i.name }}
                     </td>
                     <td>
-                      C-011
+                      {{ i.roomno }}
                     </td>
                     <td>
-                      8360171099
+                      {{ i.phoneno }}
                     </td>
                     <td>
-                      05-03-2021
+                      {{ i.date }}
                     </td>
                     <td class="text-center">
-                      Stomache Ache
+                      {{ i.problem }}
                     </td>
                     <td class="text-center">
-                      5 PM
+                      {{ i.time }}
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      Kamalpreet Singh
-                    </td>
-                    <td>
-                      C-011
-                    </td>
-                    <td>
-                      9875784209
-                    </td>
-                    <td>
-                      07-03-2021
-                    </td>
-                    <td class="text-center">
-                      Head Ache
-                    </td>
-                    <td class="text-center">
-                      7 PM
-                    </td>
-                  </tr>
+
+                  {% endfor %}
+                  
 
 
                 </tbody>
@@ -125,13 +109,13 @@
                 <div class="col-md-3 px-md-1">
                   <div class="form-group">
                     <label>Room Number</label>
-                    <input type="text" class="form-control" name="comproomno" >
+                    {{ form.roomno }}
                   </div>
                 </div>
                 <div class="col-md-4 pl-md-1">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="text" class="form-control" name="compphno" >
+                    {{ form.phoneno }}
                   </div>
                 </div>
               </div>
@@ -139,19 +123,19 @@
                 <div class="col-md-2 pr-md-1">
                   <div class="form-group">
                     <label>DATE</label>
-                    <input type="date" class="form-control" name="comp">
+                    {{ form.date }}
                   </div>
                 </div>
                 <div class="col-md-7 pr-md-1">
                   <div class="form-group">
                     <label>What medical problem you face?</label>
-                    <input type="text" class="form-control" name="comp">
+                    {{ form.problem }}
                   </div>
                 </div>
                 <div class="col-md-2 pr-md-1">
                   <div class="form-group">
-                    <label>TIME</label>
-                    <input type="text" class="form-control" name="comp">
+                    <label>TIME AT WHICH YOU WANT APPOINTMENT</label>
+                    {{ form.time }}
                   </div>
                 </div>
 
