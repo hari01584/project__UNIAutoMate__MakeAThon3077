@@ -16,7 +16,7 @@
       <div class="col-lg-16">
         <div class="card ">
           <div class="card-header">
-            <h4 class="card-title"> History</h4>
+            <h4 class="card-title">Pending Complaints</h4>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -38,35 +38,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      Kamalpreet Singh
-                    </td>
-                    <td>
-                      C-011
-                    </td>
-                    <td>
-                      8360171099
-                    </td>
-                    <td class="text-center">
-                      Door Handle is blocked
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Suprit
-                    </td>
-                    <td>
-                      D-615
-                    </td>
-                    <td>
-                      9875784209
-                    </td>
-                    <td class="text-center">
-                      Chair is broken
-                    </td>
-                  </tr>
 
+                  {% for i in complains %}
+                  <tr>
+                    <td>
+                      {{ i.name }}
+                    </td>
+                    <td>
+                      {{ i.roomno }}
+                    </td>
+                    <td>
+                      {{ i.phoneno }}
+                    </td>
+                    <td class="text-center">
+                      {{ i.complaint }}
+                    </td>
+                  </tr>
+                  {% endfor %}
 
                 </tbody>
               </table>
@@ -95,24 +83,25 @@
             <h5 class="title">Complain here</h5>
           </div>
           <div class="card-body">
-            <form>
+            <form action = "" method = "POST">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-5 pr-md-1">
                   <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" value="{{ request.user.username }}" name="compname">
+                    {{ form.name }}
                   </div>
                 </div>
                 <div class="col-md-3 px-md-1">
                   <div class="form-group">
                     <label>Room Number</label>
-                    <input type="text" class="form-control" name="comproomno" >
+                    {{ form.roomno }}
                   </div>
                 </div>
                 <div class="col-md-4 pl-md-1">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="text" class="form-control" name="compphno" >
+                    {{ form.phoneno }}
                   </div>
                 </div>
               </div>
@@ -120,7 +109,7 @@
                 <div class="col-md-10 pr-md-1">
                   <div class="form-group">
                     <label>Complaint</label>
-                    <input type="text" class="form-control" name="comp">
+                    {{ form.complaint }}
                   </div>
                 </div>
                 
