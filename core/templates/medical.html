@@ -8,122 +8,164 @@
 {% block content %}
 
 <div class="row">
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">
-        <h4 class="card-title">Notifications Style</h4>
-      </div>
-      <div class="card-body">
-        <div class="alert alert-info">
-          <span>This is a plain notification</span>
-        </div>
-        <div class="alert alert-info">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span>This is a notification with close button.</span>
-        </div>
-        <div class="alert alert-info alert-with-icon" data-notify="container">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">This is a notification with close button and icon.</span>
-        </div>
-        <div class="alert alert-info alert-with-icon" data-notify="container">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-        </div>
-      </div>
+  <div class="card card-plain">
+    <div class="card-header">
+      Medical
     </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">
-        <h4 class="card-title">Notification states</h4>
-      </div>
-      <div class="card-body">
-        <div class="alert alert-primary">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span><b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
-        </div>
-        <div class="alert alert-info">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span><b> Info - </b> This is a regular notification made with ".alert-info"</span>
-        </div>
-        <div class="alert alert-success">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span><b> Success - </b> This is a regular notification made with ".alert-success"</span>
-        </div>
-        <div class="alert alert-warning">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span><b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-        </div>
-        <div class="alert alert-danger">
-          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-          <span><b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="places-buttons">
-          <div class="row">
-            <div class="col-md-6 ml-auto mr-auto text-center">
-              <h4 class="card-title">
-                Notifications Places
-                <p class="category">Click to view notifications</p>
-              </h4>
+    <div class="card-body">
+      <div class="col-lg-16">
+        <div class="card ">
+          <div class="card-header">
+            <h4 class="card-title">History</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table tablesorter " id="">
+                <thead class=" text-primary">
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Room Number
+                    </th>
+                    <th>
+                      Phone Number
+                    </th>
+                    <th>
+                      Date
+                    </th>
+                    <th class="text-center">
+                      What medical problem do you face?
+                    </th>
+                    <th class="text-center">
+                      Time at which you want appointment?
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Kamalpreet Singh
+                    </td>
+                    <td>
+                      C-011
+                    </td>
+                    <td>
+                      8360171099
+                    </td>
+                    <td>
+                      05-03-2021
+                    </td>
+                    <td class="text-center">
+                      Stomache Ache
+                    </td>
+                    <td class="text-center">
+                      5 PM
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Kamalpreet Singh
+                    </td>
+                    <td>
+                      C-011
+                    </td>
+                    <td>
+                      9875784209
+                    </td>
+                    <td>
+                      07-03-2021
+                    </td>
+                    <td class="text-center">
+                      Head Ache
+                    </td>
+                    <td class="text-center">
+                      7 PM
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8 ml-auto mr-auto">
+        </div>
+
+    </div>
+    <!-- <form>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="rno">Room Number</label><br>
+      <input type="text" id="rno" name="rno"><br>
+      <label for="phone">Phone Number</label><br>
+      <input type="text" id="phone" name="phone"><br>
+      <label for="time">Time at which you want cleaning</label><br>
+      <input type="text" id="time" name="time"><br><br>
+      <input type="submit" value="Request for cleaning">
+    </form> -->
+
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Take Appointment of Doctor</h5>
+          </div>
+          <div class="card-body">
+            <form>
               <div class="row">
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','left')">Top Left</button>
+                <div class="col-md-5 pr-md-1">
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" value="{{ request.user.username }}" name="compname">
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','center')">Top Center</button>
+                <div class="col-md-3 px-md-1">
+                  <div class="form-group">
+                    <label>Room Number</label>
+                    <input type="text" class="form-control" name="comproomno" >
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','right')">Top Right</button>
+                <div class="col-md-4 pl-md-1">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phone Number</label>
+                    <input type="text" class="form-control" name="compphno" >
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 ml-auto mr-auto">
               <div class="row">
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','left')">Bottom Left</button>
+                <div class="col-md-2 pr-md-1">
+                  <div class="form-group">
+                    <label>DATE</label>
+                    <input type="date" class="form-control" name="comp">
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','center')">Bottom Center</button>
+                <div class="col-md-7 pr-md-1">
+                  <div class="form-group">
+                    <label>What medical problem you face?</label>
+                    <input type="text" class="form-control" name="comp">
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','right')">Bottom Right</button>
+                <div class="col-md-2 pr-md-1">
+                  <div class="form-group">
+                    <label>TIME</label>
+                    <input type="text" class="form-control" name="comp">
+                  </div>
                 </div>
+                
               </div>
-            </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-fill btn-primary">TAKE APPOINTMENT</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
+      </div>
     </div>
+
+
   </div>
 </div>
 
