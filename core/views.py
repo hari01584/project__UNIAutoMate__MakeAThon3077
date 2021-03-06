@@ -13,7 +13,8 @@ from django.http import HttpResponse
 
 from core.forms import RoomCleaningForm
 from core.models import complains, roomRequest
-
+from django.template import loader
+from django.http import HttpResponse, HttpResponseRedirect
 
 def complain_panel(request):
     comps_hist = complains.objects.all()
@@ -23,12 +24,11 @@ def room_req(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = RoomCleaningForm(request.POST)
-        print("ASADWDWDD")
         if form.is_valid():
-            print("1453453")
             form.save()
-            print("7989877")
 
+            #sreturn render(request, )
+            return HttpResponseRedirect("page-success-query.html")
             # process the data in form.cleaned_data as required
             #return HttpResponseRedirect('/thanks/')
     else:
