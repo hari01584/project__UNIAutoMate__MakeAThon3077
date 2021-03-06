@@ -25,7 +25,9 @@ def room_req(request):
         # create a form instance and populate it with data from the request:
         form = RoomCleaningForm(request.POST)
         if form.is_valid():
-            form.save()
+            thought = form.save(commit=False)
+            thought.user = request.user
+            thought.save()
 
             #sreturn render(request, )
             return HttpResponseRedirect("page-success-query.html")
@@ -35,5 +37,5 @@ def room_req(request):
         form = RoomCleaningForm()
 
 
-    reqList = roomRequest.objects.all()
+    reqList = roomRequest.objects.all().filter(user = request.user)
     return render(request, "room_req.html", {'reqList': reqList, 'form': form})
