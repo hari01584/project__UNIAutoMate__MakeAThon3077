@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Dashboard {% endblock %} 
+{% block title %} Dashboard {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -95,7 +95,7 @@
       </div>
     </div> -->
     <div class="row">
-      <div class="col-lg-6 col-md-12">
+      <!-- <div class="col-lg-6 col-md-12">
         <div class="card card-tasks">
           <div class="card-header ">
             <h6 class="title d-inline">Tasks(5)</h6>
@@ -246,11 +246,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="col-lg-6 col-md-12">
         <div class="card ">
           <div class="card-header">
-            <h4 class="card-title"> Simple Table</h4>
+            <h4 class="card-title"> Notifications</h4>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -258,21 +258,36 @@
                 <thead class=" text-primary">
                   <tr>
                     <th>
-                      Name
+                      Type
                     </th>
                     <th>
-                      Country
+                      Message
                     </th>
                     <th>
-                      City
-                    </th>
-                    <th class="text-center">
-                      Salary
+                      Time
                     </th>
                   </tr>
                 </thead>
+
+
                 <tbody>
+
+                  {% for i in notList %}
                   <tr>
+                      <td>
+                        {{ i.title }}
+                      </td>
+                      <td>
+                        {{ i.message }}
+                      </td>
+                      <td>
+                        {{ i.time }}
+                      </td>
+                    </tr>
+
+                  {% endfor %}
+
+                <!--   <tr>
                     <td>
                       Dakota Rice
                     </td>
@@ -369,7 +384,7 @@
                     <td class="text-center">
                       $98,615
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
