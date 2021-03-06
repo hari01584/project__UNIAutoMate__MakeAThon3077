@@ -38,6 +38,27 @@
                     </tr>
                   </thead>
                   <tbody>
+
+                    {% for req in reqList %}
+
+                    <tr>
+                      <td>
+                        {{ req.name }}
+                      </td>
+                      <td>
+                        {{ req.roomNo }}
+                      </td>
+                      <td>
+                        {{ req.PhoneNo }}
+                      </td>
+                      <td>
+                        {{ req.TimeCleaning }}
+                      </td>
+                    </tr>
+
+                    {% endfor %}
+
+
                     <tr>
                       <td>
                         Kamalpreet Singh
@@ -123,7 +144,7 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  
+
                 </div>
                 <div class="card-footer">
                   <button type="submit" class="btn btn-fill btn-primary">Request for Cleaning</button>
