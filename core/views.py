@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
 
-from core.forms import RoomCleaningForm, ComplaintForm, medicalForm
+from core.forms import RoomCleaningForm, ComplaintForm, medicalForm, LaundaryForm
 from core.models import complains, roomRequest, medical
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
@@ -75,3 +75,23 @@ def room_req(request):
 
     reqList = roomRequest.objects.all().filter(user=request.user)
     return render(request, "room_req.html", {'reqList': reqList, 'form': form})
+
+
+def laundary(request):
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = RoomCleaningForm(request.POST)
+        if form.is_valid():
+            thought = form.save(commit=False)
+            thought.user = request.user
+            thought.save()
+
+            # sreturn render(request, )
+            return HttpResponseRedirect("page-success-query.html")
+            # process the data in form.cleaned_data as required
+            # return HttpResponseRedirect('/thanks/')
+    else:
+        form = RoomCleaningForm()
+
+    laundary = roomRequest.objects.all().filter(user=request.user)
+    return render(request, "laundary.html", {'laundary': reqList, 'form': form})

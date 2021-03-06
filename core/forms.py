@@ -115,3 +115,36 @@ class ComplaintForm(forms.ModelForm):
     class Meta:
         model = complains
         fields = ('name', 'roomno', 'phoneno', 'complaint')
+
+
+
+class LaundaryForm(forms.ModelForm):
+    name = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control"
+            }
+        ))
+
+    roomno = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control"
+            }
+        ))
+    phoneno = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control"
+            }
+        ))
+    cloths = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control"
+            }
+        ))
+
+    class Meta:
+        model = complains
+        fields = ('name', 'roomno', 'phoneno', 'cloths')

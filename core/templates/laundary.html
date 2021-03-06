@@ -108,6 +108,57 @@
           </div>
         </div>
       </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="title">Book Your Laundary</h5>
+            </div>
+            <div class="card-body">
+                <form action = "" method = "POST">
+                  {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-5 pr-md-1">
+                    <div class="form-group">
+                      <label>Name</label>
+                      {{ form.name }}
+                    </div>
+                  </div>
+                  <div class="col-md-3 px-md-1">
+                    <div class="form-group">
+                      <label>Room Number</label>
+                      {{ form.roomno }}
+                    </div>
+                  </div>
+                  <div class="col-md-4 pl-md-1">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Phone Number</label>
+                      {{ form.phoneno }}
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-7 pr-md-1">
+                    <div class="form-group">
+                      <label>Comma Seperated Cloths List With Quanity</label>
+                      {{ form.cloths }}
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-fill btn-primary">TAKE APPOINTMENT</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 </div>

@@ -43,6 +43,18 @@ class roomRequest(models.Model):
         db_table = "roomRequest"
 
 
+class laundaryModel(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    roomNo = models.CharField(max_length=50)
+    PhoneNo = models.CharField(max_length=50)
+    cloths = models.CharField(max_length=50)
+
+    type = models.CharField(max_length=15, default='Laundary', editable=False)
+
+    class Meta:
+        db_table = "laundary"
+
 class notifications(models.Model):
     forUser = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length = 100)
