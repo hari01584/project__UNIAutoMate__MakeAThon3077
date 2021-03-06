@@ -8,5 +8,10 @@ from django.contrib import admin
 from core.models import complains, roomRequest
 
 admin.site.register(complains)
-admin.site.register(roomRequest)
+
+@admin.register(roomRequest)
+class RoomAdmin(admin.ModelAdmin):
+    list_display = ("name", "roomNo", "PhoneNo", "TimeCleaning")
 # Register your models here.
+
+admin.site.site_header = "UAutoMate Admin Console"
