@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Dashboard {% endblock %} 
+{% block title %} Dashboard {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -268,8 +268,26 @@
                     </th>
                   </tr>
                 </thead>
-                <!-- <tbody>
+
+
+                <tbody>
+
+                  {% for i in notList %}
                   <tr>
+                      <td>
+                        {{ i.title }}
+                      </td>
+                      <td>
+                        {{ i.message }}
+                      </td>
+                      <td>
+                        {{ i.time }}
+                      </td>
+                    </tr>
+
+                  {% endfor %}
+
+                <!--   <tr>
                     <td>
                       Dakota Rice
                     </td>
@@ -366,8 +384,8 @@
                     <td class="text-center">
                       $98,615
                     </td>
-                  </tr>
-                </tbody> -->
+                  </tr> -->
+                </tbody>
               </table>
             </div>
           </div>
