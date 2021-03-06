@@ -14,98 +14,48 @@
         <h5 class="title">LAUNDARY RATECARD</h5>
         <p class="category">Use this page to get different laundary facilities here</p>
       </div>
-      <div class="card-body all-icons">
-        <div class="row">
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-alert-circle-exc"></i>
-              <p>Jeans</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-align-center"></i>
-              <p>Pent</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-align-left-2"></i>
-              <p>Pyjama</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-app"></i>
-              <p>Shorts</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-atom"></i>
-              <p>Shirts</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-attach-87"></i>
-              <p>T-Shirts</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-badge"></i>
-              <p>Kurta/Salwar</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-bag-16"></i>
-              <p>Skirt</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-bank"></i>
-              <p>Dupatta</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-basket-simple"></i>
-              <p>Bed Sheet</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-bell-55"></i>
-              <p>Pillow Cover</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-bold"></i>
-              <p>Towel/H-Towel</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-book-bookmark"></i>
-              <p>Turban</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-double-right"></i>
-              <p>Uppar Hood</p>
-            </div>
-          </div>
-          <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div class="font-icon-detail">
-              <i class="tim-icons icon-simple-delete"></i>
-              <p>icon-simple-delete</p>
-            </div>
-          </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter " id="">
+            <thead class=" text-primary">
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Room Number
+                </th>
+                <th>
+                  Phone Number
+                </th>
+                <th class="text-center">
+                  TIME At which you want Pickup of Clothes
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {% for req in reqList %}
+
+              <tr>
+                <td>
+                  {{ req.name }}
+                </td>
+                <td>
+                  {{ req.roomNo }}
+                </td>
+                <td>
+                  {{ req.PhoneNo }}
+                </td>
+                <td class="text-center">
+                  {{ req.TimeCleaning  }}
+                </td>
+              </tr>
+
+              {% endfor %}
+
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -142,7 +92,7 @@
                 <div class="row">
                   <div class="col-md-7 pr-md-1">
                     <div class="form-group">
-                      <label>Comma Seperated Cloths List With Quanity</label>
+                      <label>TIME At which you want Pickup of Clothes</label>
                       {{ form.cloths }}
                     </div>
                   </div>

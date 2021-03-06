@@ -80,7 +80,7 @@ def room_req(request):
 def laundary(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = RoomCleaningForm(request.POST)
+        form = LaundaryForm(request.POST)
         if form.is_valid():
             thought = form.save(commit=False)
             thought.user = request.user
@@ -91,7 +91,7 @@ def laundary(request):
             # process the data in form.cleaned_data as required
             # return HttpResponseRedirect('/thanks/')
     else:
-        form = RoomCleaningForm()
+        form = LaundaryForm()
 
-    laundary = roomRequest.objects.all().filter(user=request.user)
-    return render(request, "laundary.html", {'laundary': reqList, 'form': form})
+    laundary = laundaryRequest.objects.all().filter(user=request.user)
+    return render(request, "laundary.html", {'laundary': laundary, 'form': form})
