@@ -16,7 +16,8 @@ def index(request):
 
     context = {}
     context['segment'] = 'index'
-
+    context['geytemp'] = '70'
+    context['hostellift'] = '6th Floor'
 
     notList = notifications.objects.all().filter(forUser=request.user).order_by('-time')
     context['notList'] = notList
