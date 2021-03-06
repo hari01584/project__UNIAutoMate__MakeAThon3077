@@ -113,12 +113,13 @@
             <h5 class="title">Take Appointment of Doctor</h5>
           </div>
           <div class="card-body">
-            <form>
+              <form action = "" method = "POST">
+                {% csrf_token %}
               <div class="row">
                 <div class="col-md-5 pr-md-1">
                   <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" value="{{ request.user.username }}" name="compname">
+                    {{ form.name }}
                   </div>
                 </div>
                 <div class="col-md-3 px-md-1">
@@ -153,7 +154,7 @@
                     <input type="text" class="form-control" name="comp">
                   </div>
                 </div>
-                
+
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-fill btn-primary">TAKE APPOINTMENT</button>
