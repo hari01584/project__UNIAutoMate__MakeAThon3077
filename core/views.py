@@ -11,10 +11,14 @@ from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
 
-from core.models import complains
+from core.models import complains, roomRequest
 
 
 def complain_panel(request):
-
     comps_hist = complains.objects.all()
     return render(request, "complain_panel.html",{'complains': comps_hist})
+
+def room_req(request):
+    print(request.POST)
+    reqList = roomRequest.objects.all()
+    return render(request, "room_req.html",{'reqList': reqList})
