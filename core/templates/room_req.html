@@ -110,7 +110,7 @@
 
 
 
-      <form action = "" method = "GET">
+      <form action = "" method = "POST">
           {% csrf_token %}
       <div class="row">
         <div class="col-lg-12">
@@ -124,19 +124,19 @@
                   <div class="col-md-5 pr-md-1">
                     <div class="form-group">
                       <label>Name</label>
-                      <input type="text" class="form-control" value="{{ request.user.username }}" name="cname">
+                      {{ form.name }}
                     </div>
                   </div>
                   <div class="col-md-3 px-md-1">
                     <div class="form-group">
                       <label>Room Number</label>
-                      <input type="text" class="form-control" name="croomno" >
+                      {{ form.roomNo }}
                     </div>
                   </div>
                   <div class="col-md-4 pl-md-1">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Phone Number</label>
-                      <input type="text" class="form-control" name="cphno" >
+                      {{ form.PhoneNo }}
                     </div>
                   </div>
                 </div>
@@ -144,10 +144,9 @@
                   <div class="col-md-6 pr-md-1">
                     <div class="form-group">
                       <label>Time at which you want cleaning</label>
-                      <input type="text" class="form-control" name="reqforclean">
+                      {{ form.TimeCleaning }}
                     </div>
                   </div>
-
                 </div>
                 <div class="card-footer">
                   <button type="submit" class="btn btn-fill btn-primary">Request for Cleaning</button>
