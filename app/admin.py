@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from core.models import complains, roomRequest, notifications, medical
+from core.models import complains, roomRequest, notifications, medical, laundaryRequest
 from django.contrib import messages
 import datetime
 
@@ -51,6 +51,12 @@ class ComplainsAdmin(admin.ModelAdmin):
 @admin.register(medical)
 class MedicalAdmin(admin.ModelAdmin):
     list_display = ("name", "roomno", "phoneno", "date", "problem", "time")
+    actions = [accept,decline]
+
+
+@admin.register(laundaryRequest)
+class LaundaryAdmin(admin.ModelAdmin):
+    list_display = ("name", "roomno", "phoneno", "time")
     actions = [accept,decline]
 
 admin.site.site_header = "UAutoMate Admin Console"
