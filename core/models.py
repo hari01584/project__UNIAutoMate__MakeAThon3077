@@ -27,12 +27,20 @@ class medical(models.Model):
 
 
 class roomRequest(models.Model):
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     roomNo = models.CharField(max_length=50)
     PhoneNo = models.CharField(max_length=50)
     TimeCleaning = models.CharField(max_length=50)
-
     class Meta:
         db_table = "roomRequest"
+
+
+class notifications(models.Model):
+    forUser = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length = 100)
+    message = models.CharField(max_length = 100)
+    time = models.CharField(max_length = 50)
+
+    class Meta:
+        db_table = "notifications"
