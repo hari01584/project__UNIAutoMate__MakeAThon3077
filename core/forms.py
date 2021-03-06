@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django import forms
 from django.forms import ModelForm
-from core.models import roomRequest, complains, medical
+from core.models import roomRequest, complains, medical, laundaryRequest
 
 
 class RoomCleaningForm(forms.ModelForm):

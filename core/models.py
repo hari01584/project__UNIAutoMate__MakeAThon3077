@@ -44,11 +44,11 @@ class roomRequest(models.Model):
         db_table = "roomRequest"
 
 
-class laundaryModel(models.Model):
+class laundaryRequest(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     roomno = models.CharField(max_length=50)
-    nhoneno = models.CharField(max_length=50)
+    phoneno = models.CharField(max_length=50)
     time = models.CharField(max_length=50)
 
     type = models.CharField(max_length=15, default='Laundary', editable=False)

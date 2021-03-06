@@ -12,7 +12,7 @@ from django.forms.utils import ErrorList
 from django.http import HttpResponse
 
 from core.forms import RoomCleaningForm, ComplaintForm, medicalForm, LaundaryForm
-from core.models import complains, roomRequest, medical
+from core.models import complains, roomRequest, medical, laundaryRequest
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 
@@ -93,5 +93,5 @@ def laundary(request):
     else:
         form = LaundaryForm()
 
-    laundary = laundaryRequest.objects.all().filter(user=request.user)
-    return render(request, "laundary.html", {'laundary': laundary, 'form': form})
+    la = laundaryRequest.objects.all().filter(user=request.user)
+    return render(request, "laundary.html", {'laundary': la, 'form': form})
