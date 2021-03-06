@@ -19,5 +19,6 @@ def complain_panel(request):
     return render(request, "complain_panel.html",{'complains': comps_hist})
 
 def room_req(request):
+    print(request.POST)
     reqList = roomRequest.objects.all()
     return render(request, "room_req.html",{'reqList': reqList})
