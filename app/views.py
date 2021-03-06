@@ -8,7 +8,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-
+import random
 from core.models import notifications
 
 @login_required(login_url="/login/")
@@ -17,6 +17,8 @@ def index(request):
     context = {}
     context['segment'] = 'index'
 
+    context['geytemp'] = random.randrange(60,80)
+    context['hostellift'] = str(random.randrange(4,6+1))+'th Floor'
 
     notList = notifications.objects.all().filter(forUser=request.user).order_by('-time')
     context['notList'] = notList
