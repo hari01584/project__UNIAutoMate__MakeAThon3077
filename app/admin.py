@@ -15,8 +15,8 @@ def accept(modeladmin, request, queryset):
     for i in list(queryset):
         n = notifications()
         n.forUser = i.user
-        n.title = "Suceess"
-        n.message = "as"
+        n.title = i.type
+        n.message = "Your Request For %s Has Been Accepted!" % (i.type,)
         n.time = datetime.datetime.now().strftime("%I:%M %p on %B %d, %Y")
         n.save()
         #i.delete()
