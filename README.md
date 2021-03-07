@@ -93,7 +93,21 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
    |
    |-- ************************************************************************
 ```
+### Todos
 
+ - Geyser and Lift Integration (Using IoT Devices)
+ - **Mess system and queue tracker**
+ - *More hardware integrations and facilities*
+ - Advance UI
+
+
+### What Has Been Done
+
+ - Fake data geyser temperature and lift tracking
+ - **RSVP Confirm/Reject Requests Feature**
+ - *Admin panel to track all the orders/requests made*
+ - **Implemented Complains, Laundary System, Medical, Room Request**
+ 
  ### Tech
 
 UNIAutoMate uses these source projects to work properly:
