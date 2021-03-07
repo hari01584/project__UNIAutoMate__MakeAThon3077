@@ -93,3 +93,11 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
    |
    |-- ************************************************************************
 ```
+
+ ### Tech
+
+UNIAutoMate uses these source projects to work properly:
+
+* [Creative Tim's Black Dashboard](https://github.com/creativetimofficial/black-dashboard) - Basic dashboard template with login/signup pages!
+
+And of course UNIAutoMate itself is open source with a [public repository](https://github.com/hari01584/project__UNIAutoMate__MakeAThon3077) on GitHub.
