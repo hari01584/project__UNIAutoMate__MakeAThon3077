@@ -4,6 +4,12 @@
 
 There are two main aspects of the project : one being the student dashboard, where every student can register and have their own account, and file complaints, book laundry services, request room cleaning, and so on. The second part is the admin page, which lets the administrator see everything logged and requested by all the students, and then accept or decline it. Correspondingly, the student gets a notification on their personal account regarding the status of their filed log. Henceforth its a comprehensive and extremely convenient way to log and track issues both for the students as well as for the college/hostel administration.
 
+## Screenshots 
+
+[![Screenshot-20210307-061529.png](https://i.postimg.cc/3r1vY2dt/Screenshot-20210307-061529.png)](https://postimg.cc/grwJKXyh)
+
+[![Screenshot-20210307-061608.png](https://i.postimg.cc/kXDBCzr5/Screenshot-20210307-061608.png)](https://postimg.cc/gnFYqM29)
+
 
 ## How to build and run Uni-Automate from source
 
