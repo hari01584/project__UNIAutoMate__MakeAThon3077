@@ -1,4 +1,4 @@
-# Uni-Automate
+# Uni-Automate - Team CodeChamps
 
 > An integrated dashboard and issue tracker to automate common issues faced in hostels in universities. It aims to upheave the very inefficient, redundant and cumbersome system of issue tracking using physical notebooks; and replaces it with an elegant modern smart solution that harnesses the power of technology to vastly automate a multitude of aspects of the hostel life
 
